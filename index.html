@@ -30,7 +30,11 @@
                     height: auto;
                 }
                 .textBox{
-                    padding: 0px;
+                    padding: 5px;
+                }
+                .titleImgBox{
+                    padding: 5px;
+                    padding-top: 60px;
                 }
             } 
 
@@ -99,7 +103,7 @@
                             new Editor(xmlhttp.responseText, $("textBox"));
                         }
                     }
-                    xmlhttp.open("GET","README.md",true);
+                    xmlhttp.open("GET","usersMdFiles/2018-04-22-ByWy-exampleCode.md",true);
                     xmlhttp.send();
                 }
 
