@@ -4,8 +4,10 @@
 If you want to develop it with me,welcome to contact me.  
 Just leave some issues.\^_^*  
 ******
-blogs,display words or others.
-[support](https://github.com/evilstreak/markdown-js)
+blogs,display words or others.  
+[grammar](http://www.markdown.cn/)  
+[support](https://github.com/evilstreak/markdown-js)  
+[express](http://www.expressjs.com.cn/)
 *********************************************************
 ### structure
 
