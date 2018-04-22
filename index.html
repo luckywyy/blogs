@@ -73,10 +73,36 @@
         <script src="node_modules/markdown/lib/markdown.js"></script>
         <!-- load script -->
         <script type="text/javascript">
-            $(function(){
                 
                 // convert md
                 // assume there are some context with md
+
+                loadMd();
+                
+                function loadMd()
+                {
+                    var xmlhttp;
+                    if (window.XMLHttpRequest)
+                    {
+                        //  IE7+, Firefox, Chrome, Opera, Safari 浏览器执行代码
+                        xmlhttp=new XMLHttpRequest();
+                    }
+                    else
+                    {
+                        // IE6, IE5 浏览器执行代码
+                        xmlhttp=new ActiveXObject("Microsoft.XMLHTTP");
+                    }
+                    xmlhttp.onreadystatechange=function()
+                    {
+                        if (xmlhttp.readyState==4 && xmlhttp.status==200)
+                        {
+                            new Editor(xmlhttp.responseText, $("textBox"));
+                        }
+                    }
+                    xmlhttp.open("GET","README.md",true);
+                    xmlhttp.send();
+                }
+
                 function Editor(input, display) {
                     this.update = function () {
                         display.innerHTML = markdown.toHTML(input);
@@ -84,10 +110,7 @@
                     this.update();
                 }
                 var $ = function (id) { return document.getElementById(id); };
-                new Editor("***", $("textBox"));
-
-
-            });
+                
         </script>
     </body>
 </html>

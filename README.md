@@ -1,8 +1,8 @@
 # blogs
 
-<i style="color:orange;"> I want to record my words daily,but I will complete some functions,like signing in/up,sending blogs by others and so on.  
+*I want to record my words daily,but I will complete some functions,like signing in/up,sending blogs by others and so on.  
 If you want to develop it with me,welcome to contact me.  
-Just leave some issues. \^_^ <i>
+Just leave some issues.\^_^*  
 ******
 blogs,display words or others.
 [support](https://github.com/evilstreak/markdown-js)
