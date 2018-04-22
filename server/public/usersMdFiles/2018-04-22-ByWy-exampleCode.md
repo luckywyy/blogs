@@ -17,6 +17,8 @@ blogs,display words or others.
     - /....
 - / ...
 
+## 而图片会自行压缩至适应大小
+
 *** 
 *I want to record my words daily,but I will complete some functions,like signing in/up,sending blogs by others and so on.  
 If you want to develop it with me,welcome to contact me.  

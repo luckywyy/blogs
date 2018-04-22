@@ -15,18 +15,47 @@
         <title>index</title>
         <style type="text/css">
             .commonBox{
+                width: 100%;
+                height: auto;
                 margin: 0 auto;
+                background-color: white;
             }
             
+            .displayBox{
+                margin: 0 auto;
+                height: auto;
+                background-color: #f6f6f6;
+                transition: all 2s;
+                padding-top: 10px;
+            }
+            
+            .footerBox{
+                margin: 0 auto;
+                background-color: white;
+                padding-top: 20px;
+                border-top: gray 1px solid;
+            }
+
             @media (max-width: 900px) {
+                
+                .displayBox{
+                    width: 100%;
+                }
                 
             }
             @media (min-width: 901px) {
                 .headBox{
+                    margin: 0 auto;
                     width: 900px;
                     height: auto;
-                    background-color: white;
-                    margin: 0 auto;
+                    transition: all 2s;
+                }
+                .displayBox{
+                    width: 900px;
+                }
+                .footerBox{
+                    width: 900px;
+                    height: auto;
                 }
             }
         </style>
@@ -36,14 +65,136 @@
         
         <div class="container-fluid">
             <div class="row">
-                <div class="commonBox">
-                    <nav class="navbar fix-top headBox">
-                        <a class="navbar-brand" href="">welcome</a>
+                <div class="commonBox fixed-top headCom">
+                    <nav class="navbar headBox" style="transition: all 1s;">
+                        <a id="welcomeTitle" class="navbar-brand" href="##">welcome</a>
                         <span class="navbar-text"> other </span>
                     </nav>
                 </div>
-                <div class="commonBox"></div>
-                <div></div>
+
+                <div class="commonBox" style="padding-top: 56px; background-color: rgb(233, 236, 239);">
+                    <div class="jumbotron headBox">
+                        <h1 class="display-4">Find a good blog.</h1>
+                        <p class="lead">You can find something here.</p>
+                        <hr class="my-4">
+                        <p>In particular, if you like a blog, you can star it.</p>
+                        <p class="lead">
+                            <a class="btn btn-primary btn-lg" href="#" role="button">Learn more</a>
+                        </p>
+                    </div>
+                </div>
+
+                <div class="displayBox">
+                    
+<!-- display 流 -->
+
+                    <div class="card-columns">
+                        <div class="card">
+                            <img class="card-img-top" src="images/2018-04-23-byWy-logo-exampleUniqueCode.jpg" alt="Card image cap">
+                            <div class="card-body">
+                                <h5 class="card-title">Blog Title</h5>
+                                <p class="card-text">blog brief introduction.blog brief introduction.blog brief introduction.blog brief introduction.blog brief introduction.</p>
+                            </div>
+                        </div>
+
+                        <div class="card p-3">
+                            <blockquote class="blockquote mb-0 card-body">
+                            <p>Today,we elaborate some thing.</p>
+                            <footer class="blockquote-footer">
+                                <small class="text-muted">
+                                <a href="##">please click here.</a>
+                                </small>
+                            </footer>
+                            </blockquote>
+                        </div>
+                        
+                        <div class="card text-center">
+                            <div class="card-body">
+                                <h5 class="card-title">Card title</h5>
+                                <p class="card-text">This card has supporting text below as a natural lead-in to additional content.</p>
+                                <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+                            </div>
+                        </div>
+
+                        <div class="card">
+                            <a href="##"><img class="card-img" src="images/2018-04-22-byWy-titleImg-exampleUniqueCode.jpg" alt="Card image"></a>
+                        </div>
+
+                        <div class="card p-3 text-right">
+                            <blockquote class="blockquote mb-0">
+                                <p>一场视觉盛宴，来自新安.</p>
+                                <footer class="blockquote-footer">
+                                    <small class="text-muted">
+                                    <a href="##">click it</a>
+                                    </small>
+                                </footer>
+                            </blockquote>
+                        </div>
+                        
+                        <div class="card">
+                            <a href="##"><img class="card-img" src="images/2018-04-22-byWy-titleImg-exampleUniqueCode.jpg" alt="Card image"></a>
+                        </div>
+
+                        <div class="card">
+                            <div class="card-body">
+                                <h5 class="card-title">blog Title</h5>
+                                <p class="card-text">如何快速在他人面前展示一个blog</p>
+                                <p class="card-text"><small class="text-muted">开发者于3日前更新</small></p>
+                            </div>
+                        </div>
+
+                        
+                        <div class="card text-center">
+                            <div class="card-body">
+                                <h5 class="card-title">Card title</h5>
+                                <p class="card-text">This card has supporting text below as a natural lead-in to additional content.</p>
+                                <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+                            </div>
+                        </div>
+
+                        <div class="card">
+                            <a href="##"><img class="card-img" src="images/2018-04-22-byWy-titleImg-exampleUniqueCode.jpg" alt="Card image"></a>
+                        </div>
+
+                        <div class="card p-3 text-right">
+                            <blockquote class="blockquote mb-0">
+                                <p>一场视觉盛宴，来自新安.</p>
+                                <footer class="blockquote-footer">
+                                    <small class="text-muted">
+                                    <a href="##">click it</a>
+                                    </small>
+                                </footer>
+                            </blockquote>
+                        </div>
+                        
+                        <div class="card">
+                            <a href="##"><img class="card-img" src="images/2018-04-22-byWy-titleImg-exampleUniqueCode.jpg" alt="Card image"></a>
+                        </div>
+
+                        <div class="card">
+                            <div class="card-body">
+                                <h5 class="card-title">blog Title</h5>
+                                <p class="card-text">如何快速在他人面前展示一个blog</p>
+                                <p class="card-text"><small class="text-muted">开发者于3日前更新</small></p>
+                            </div>
+                        </div>
+                    </div>
+<!-- display 流 -->
+                    
+                    <div class="headBox" style="height: 50px;line-height: 50px; text-align: center;margin: 0 auto;">
+                        <a href="##">加载更多-></a>
+                    </div>
+                </div>
+                
+                <footer class="commonBox" style="background-color: #f6f6f6;">
+                    <div class="footerBox">
+                        <span class="badge badge-success"><a href="##">返回顶端</a></span>
+                        <span class="badge badge-success"><a href="##">注册账号</a></span>
+                        <span class="badge badge-success"><a href="##">...</a></span>
+                        <hr>
+                        <span class="badge badge-success">@put your problems to <a href="https://github.com/luckywyy/blogs">GitHub</a></span>
+                    </div>
+                </footer>
             </div>
         </div>
 
@@ -59,7 +210,25 @@
         <script src="markdown/lib/markdown.js"></script>
         <!-- load script -->
         <script type="text/javascript">
-                
+            $(window).scroll(function () {
+            if ($(window).scrollTop() != 0) {
+                $(".headCom").css("box-shadow","0px 1px 2px rgb(240,240,240)");
+                $(".headCom").css("backgroundColor","rgb(0,123,255)");
+                $("#welcomeTitle").css("color","white");
+                // $(".headCom").animate({ 
+                //     boxShadow: "0px 1px 2px rgb(240,240,240)",
+                //     backgroundColor: "rgb(0,123,255)"
+                // }, 1000 );
+                // $("#welcomeTitle").animate({
+                //     color: "white"
+                // },"slow");
+            }
+            else{
+                $(".headCom").css("box-shadow","0px 2px 5px white");
+                $(".headCom").css("backgroundColor","white");
+                $("#welcomeTitle").css("color","rgb(0,123,255)");
+            }
+            });
         </script>
     </body>
 </html>
