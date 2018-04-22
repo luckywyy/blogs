@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="zh">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <link rel="stylesheet" href="https://cdn.bootcss.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+        
+        <!-- HTML5 shim 和 Respond.js 是为了让 IE8 支持 HTML5 元素和媒体查询（media queries）功能 -->
+        <!-- 警告：通过 file:// 协议（就是直接将 html 页面拖拽到浏览器中）访问页面时 Respond.js 不起作用 -->
+        <!--[if lt IE 9]>
+            <script src="https://cdn.bootcss.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+            <script src="https://cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
+        <![endif]-->
+
+        <title>index</title>
+
+        <style type="text/css">
+            .mainBox{
+                background-color: white;
+                width: 600px;
+                height: 1000px;
+                margin: 0 auto;
+            }
+            .textBox{
+                padding: 20px;
+                padding-top: 55px;
+            }
+            .footerBox{
+                padding: 20px;
+            }
+            @media (max-width: 600px) {
+                .mainBox{
+                    width: 100%;
+                    height: auto;
+                }
+                .textBox{
+                    padding: 5px;
+                }
+                .titleImgBox{
+                    padding: 5px;
+                    padding-top: 60px;
+                }
+                .footerBox{
+                    padding: 5px;
+                }
+            } 
+
+            @media (min-width: 601px) {
+                .mainBox{
+                    width: 600px;
+                    height: auto;
+                    overflow: hidden;
+                }
+            }
+        </style>
+    </head>
+
+    <body style="background: #f6f6f6;">
+
+        <div class="container-fluid">
+            <div class="row">
+                <nav class="navbar navbar-dark bg-primary fixed-top">
+                    <a class="navbar-brand" href="">发帖</a>
+                    <span class="navbar-text"> 这个颜色不错 我喜欢</span>
+                </nav>
+                <div class="mainBox">
+                    <div class="titleImgBox">
+                        <img src="images/2018-04-22-byWy-titleImg-exampleUniqueCode.jpg" class="img-fluid" alt="titleImg"/>
+                    </div>
+                    <!-- text box -->
+
+                    <div id="textBox" class="textBox">
+                        
+                    </div>
+
+                    <div class="footerBox">
+                            <!--                                            bootstrap group card                                        -->
+                        <div class="card-group">
+                            <div class="card">
+                                <img class="card-img-top" src="images/2018-04-23-byWy-logo-exampleUniqueCode.jpg" alt="Card image cap">
+                                <div class="card-body">
+                                    <h5 class="card-title">作者</h5>
+                                    <p class="card-text">作者备注：此文章没有授权，禁止转载</p>
+                                </div>
+                                <div class="card-footer">
+                                    <small class="text-muted">文章作者最近更新此文章于2天1小时前</small>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- 结尾 -->
+                    <span class="badge badge-success">@put your problems to <a href="https://github.com/luckywyy/blogs">GitHub</a></span>
+
+                    </div>
+
+
+
+                </div>
+
+            </div>
+        </div>
+        
+        <script src="https://cdn.bootcss.com/jquery/3.3.1/jquery.min.js"></script>
+        <script src="https://cdn.bootcss.com/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+        <script src="https://cdn.bootcss.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+        <!-- cite markdown js  -->
+        <script src="markdown/lib/markdown.js"></script>
+        <!-- load script -->
+        <script type="text/javascript">
+                
+                // convert md
+                // assume there are some context with md
+
+                $.get("usersMdFiles/2018-04-22-ByWy-exampleCode.md", function(data){
+                    new Editor(data, $("textBox"));
+                });
+
+                function Editor(input, display) {
+                    this.update = function () {
+                        display.innerHTML = markdown.toHTML(input);
+                    };
+                    this.update();
+                }
+                var $ = function (id) { return document.getElementById(id); };
+                
+        </script>
+    </body>
+</html>
