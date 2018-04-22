@@ -58,7 +58,7 @@
                 </nav>
                 <div class="mainBox">
                     <div class="titleImgBox">
-                        <img src="static/imgs/2018-04-22-byWy-exampleUniqueCode.jpg" class="img-fluid" alt="titleImg"/>
+                        <img src="images/2018-04-22-byWy-exampleUniqueCode.jpg" class="img-fluid" alt="titleImg"/>
                     </div>
                     <!-- text box -->
 
@@ -70,42 +70,20 @@
             </div>
         </div>
         
-        <script src="https://cdn.bootcss.com/jquery/3.2.1/jquery.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+        <script src="https://cdn.bootcss.com/jquery/3.3.1/jquery.min.js"></script>
         <script src="https://cdn.bootcss.com/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
         <script src="https://cdn.bootcss.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
         <!-- cite markdown js  -->
-        <script src="node_modules/markdown/lib/markdown.js"></script>
+        <script src="markdown/lib/markdown.js"></script>
         <!-- load script -->
         <script type="text/javascript">
                 
                 // convert md
                 // assume there are some context with md
 
-                loadMd();
-                
-                function loadMd()
-                {
-                    var xmlhttp;
-                    if (window.XMLHttpRequest)
-                    {
-                        //  IE7+, Firefox, Chrome, Opera, Safari 浏览器执行代码
-                        xmlhttp=new XMLHttpRequest();
-                    }
-                    else
-                    {
-                        // IE6, IE5 浏览器执行代码
-                        xmlhttp=new ActiveXObject("Microsoft.XMLHTTP");
-                    }
-                    xmlhttp.onreadystatechange=function()
-                    {
-                        if (xmlhttp.readyState==4 && xmlhttp.status==200)
-                        {
-                            new Editor(xmlhttp.responseText, $("textBox"));
-                        }
-                    }
-                    xmlhttp.open("GET","usersMdFiles/2018-04-22-ByWy-exampleCode.md",true);
-                    xmlhttp.send();
-                }
+                $.get("usersMdFiles/2018-04-22-ByWy-exampleCode.md", function(data){
+                    new Editor(data, $("textBox"));
+                });
 
                 function Editor(input, display) {
                     this.update = function () {
