@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="zh">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <link rel="stylesheet" href="https://cdn.bootcss.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+        
+        <!-- HTML5 shim 和 Respond.js 是为了让 IE8 支持 HTML5 元素和媒体查询（media queries）功能 -->
+        <!-- 警告：通过 file:// 协议（就是直接将 html 页面拖拽到浏览器中）访问页面时 Respond.js 不起作用 -->
+        <!--[if lt IE 9]>
+            <script src="https://cdn.bootcss.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+            <script src="https://cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
+        <![endif]-->
+
+        <title>index</title>
+
+        <style type="text/css">
+            .mainBox{
+                background-color: white;
+                width: 600px;
+                height: 1000px;
+                margin: 0 auto;
+            }
+            .textBox{
+                padding: 20px;
+            }
+            @media (max-width: 600px) {
+                .mainBox{
+                    width: 100%;
+                    height: auto;
+                }
+                .textBox{
+                    padding: 0px;
+                }
+            } 
+
+            @media (min-width: 601px) {
+                .mainBox{
+                    width: 600px;
+                    height: auto;
+                    overflow: hidden;
+                }
+            }
+        </style>
+    </head>
+
+    <body style="background: #f6f6f6;">
+
+        <div class="container-fluid">
+            <div class="row">
+                <nav class="navbar navbar-dark bg-primary fixed-top">
+                    <a class="navbar-brand" href="">发帖</a>
+                    <span class="navbar-text"> 这个颜色不错 我喜欢</span>
+                </nav>
+                <div class="mainBox">
+                    <div class="titleImgBox">
+                        <img src="static/imgs/2018-04-22-byWy-exampleUniqueCode.jpg" class="img-fluid" alt="titleImg"/>
+                    </div>
+                    <!-- text box -->
+
+                    <div id="textBox" class="textBox">
+                        
+                    </div>
+                </div>
+
+            </div>
+        </div>
+        
+        <script src="https://cdn.bootcss.com/jquery/3.2.1/jquery.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+        <script src="https://cdn.bootcss.com/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+        <script src="https://cdn.bootcss.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+        <!-- cite markdown js  -->
+        <script src="node_modules/markdown/lib/markdown.js"></script>
+        <!-- load script -->
+        <script type="text/javascript">
+            $(function(){
+                
+                // convert md
+                // assume there are some context with md
+                function Editor(input, display) {
+                    this.update = function () {
+                        display.innerHTML = markdown.toHTML(input);
+                    };
+                    this.update();
+                }
+                var $ = function (id) { return document.getElementById(id); };
+                new Editor("***", $("textBox"));
+
+
+            });
+        </script>
+    </body>
+</html>
