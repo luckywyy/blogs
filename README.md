@@ -11,10 +11,12 @@ blogs,display words or others.
 *********************************************************
 ### structure
 
-- / usersMdFiles
-    - / examples-2018-04-22-byWy-uniqueCode *.* md
-- / usersHtmlFiles
-    - / examples-2018-04-22-byWy-uniqueCode *.* html
-- / utilJs
-    - /....
+- / user
+    - / writeBlog
+    - / ownInfo
+    - / ...
+- / guide
+    - / readBlog
+    - / index
+    - / ...
 - / ...
