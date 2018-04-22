@@ -1,7 +1,7 @@
 # blogs
 
-<i style="color:orange;"> I want to record my words daily,but I will complete some functions,like signing in/up,sending blogs by others and so on.
-If you want to develop it with me,welcome to contact me.
+<i style="color:orange;"> I want to record my words daily,but I will complete some functions,like signing in/up,sending blogs by others and so on.  
+If you want to develop it with me,welcome to contact me.  
 Just leave some issues. \^_^ <i>
 ******
 blogs,display words or others.
