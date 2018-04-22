@@ -60,7 +60,7 @@
         <div class="container-fluid">
             <div class="row">
                 <nav class="navbar navbar-dark bg-primary fixed-top">
-                    <a class="navbar-brand" href="">发帖</a>
+                    <a class="navbar-brand" href="../users/writeBlog">发帖</a>
                     <span class="navbar-text"> 这个颜色不错 我喜欢</span>
                 </nav>
                 <div class="mainBox">
@@ -109,10 +109,8 @@
                 
                 // convert md
                 // assume there are some context with md
-
-                $.get("usersMdFiles/2018-04-22-ByWy-exampleCode.md", function(data){
-                    new Editor(data, $("textBox"));
-                });
+                
+                var $ = function (id) { return document.getElementById(id); };
 
                 function Editor(input, display) {
                     this.update = function () {
@@ -120,7 +118,11 @@
                     };
                     this.update();
                 }
-                var $ = function (id) { return document.getElementById(id); };
+
+                $.get("usersMdFiles/2018-04-22-ByWy-exampleCode.md", function(data){
+                    new Editor(data, $("textBox"));
+                });
+
                 
         </script>
     </body>
