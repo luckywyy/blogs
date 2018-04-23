@@ -20,12 +20,17 @@
 
     <body style="background: #f6f6f6;">
 
-        <h1>write your blog here...写不下去了 狗日的前端</h1>
+        <div class="container-fluid">
+            <div class="row">
+                <textarea id="text-input">
 
+                </textarea>
+                <div id="preview">
 
+                </div>
+            </div>
+        </div>
 
-
-        
         <script src="https://cdn.bootcss.com/jquery/3.3.1/jquery.min.js"></script>
         <script src="https://cdn.bootcss.com/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
         <script src="https://cdn.bootcss.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
@@ -33,7 +38,16 @@
         <script src="../markdown/lib/markdown.js"></script>
         <!-- load script -->
         <script type="text/javascript">
-                
+                        
+            function Editor(input, preview) {
+                this.update = function () {
+                preview.innerHTML = markdown.toHTML(input.value);
+                };
+                input.editor = this;
+                this.update();
+            }
+            var $ = function (id) { return document.getElementById(id); };
+            new Editor($("text-input"), $("preview"));
         </script>
     </body>
 </html>
