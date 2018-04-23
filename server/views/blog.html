@@ -110,6 +110,12 @@
                 // convert md
                 // assume there are some context with md
                 
+                $.get("usersMdFiles/2018-04-22-ByWy-exampleCode.md", function(data){
+                    new Editor(data, $("textBox"));
+                });
+
+
+                
                 var $ = function (id) { return document.getElementById(id); };
 
                 function Editor(input, display) {
@@ -118,10 +124,6 @@
                     };
                     this.update();
                 }
-
-                $.get("usersMdFiles/2018-04-22-ByWy-exampleCode.md", function(data){
-                    new Editor(data, $("textBox"));
-                });
 
                 
         </script>
