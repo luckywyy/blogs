@@ -4,7 +4,7 @@ var path = require('path');
 
 /* GET users listing. */
 router.get('/writeBlog', function(req, res, next) {
-  res.send('writeBlog');
+  res.sendFile(path.join(__dirname, '../views/writeBlog.html'));
 });
 
 module.exports = router;

@@ -1,4 +1,4 @@
-# blogs
+# Title
 
 *I want to record my words daily,but I will complete some functions,like signing in/up,sending blogs by others and so on.  
 If you want to develop it with me,welcome to contact me.  
@@ -17,39 +17,19 @@ blogs,display words or others.
     - /....
 - / ...
 
-*** 
-## test
+## 而图片会自行压缩至适应大小
 
 *** 
-## test
-
-*** 
-## test
-
-*** 
-## test
-
-*** 
-## test
-
-*** 
-## test
-
-*** 
-## test
-
-*** 
-## test
-
-*** 
-## test
-
-*** 
-## test
-
-*** 
-## test
-
-*** 
-## test
+*I want to record my words daily,but I will complete some functions,like signing in/up,sending blogs by others and so on.  
+If you want to develop it with me,welcome to contact me.  
+Just leave some issues.\^_^*  
+******
+*I want to record my words daily,but I will complete some functions,like signing in/up,sending blogs by others and so on.  
+If you want to develop it with me,welcome to contact me.  
+Just leave some issues.\^_^*  
+******
+*I want to record my words daily,but I will complete some functions,like signing in/up,sending blogs by others and so on.  
+If you want to develop it with me,welcome to contact me.  
+Just leave some issues.\^_^*  
+******
 ***********************
