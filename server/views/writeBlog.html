@@ -45,15 +45,21 @@
                     </p>
                 </div>
                 <!-- center fuck -->
-                <div class="box centerBox" style="margin-top: 100px;">
-                    <textarea style="width: 100%; height: auto; min-height: 200px;">
+                <div class="box centerBox" style="margin-top: 200px;">
+                    
+                    <div id="preview" style="background-color: white;">
+
+                    </div>
+                    <textarea id="text-input" style="width: 100%; height: auto; min-height: 200px;">
 
                     </textarea>
+
+                    <footer>       
+                        <span class="badge badge-success">ok<a href="##" onClick="sendContent">send</a></span>
+                        <span class="badge badge-success">return<a href="#" onClick="javascript :history.back(-1);">back</a></span>
+                    </footer>
                 </div>
                 <!-- fuck -->
-                <footer>
-                    
-                </footer>
             </div>
         </div>
 
@@ -64,7 +70,16 @@
         <script src="../markdown/lib/markdown.js"></script>
         <!-- load script -->
         <script type="text/javascript">
-                        
+
+
+            function sendContent(){
+                
+            }
+            
+            $("#text-input").keyup(function(){
+                new Editor($("text-input"), $("preview"));
+            });
+
             function Editor(input, preview) {
                 this.update = function () {
                 preview.innerHTML = markdown.toHTML(input.value);
